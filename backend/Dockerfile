@@ -1,6 +1,5 @@
 FROM node:16
 WORKDIR /app/backend
-COPY ./package.json /app/backend
+COPY backend /app/backend
 RUN npm install
-COPY . .
 CMD ["npm", "start"]

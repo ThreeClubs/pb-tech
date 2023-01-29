@@ -22,6 +22,7 @@ function Home() {
   const [isActive, setIsActive] = useState(false);
   const [contentToggle, setContentToggle] = useState(false);
   const [laptops, setLaptops] = useState([]);
+  const [filteredLaptops, setFilteredLaptops] = useState(laptops);
 
   useEffect(() => {
     axios
@@ -154,7 +155,7 @@ function Home() {
                 </ul>
               </div>
             </div>
-            <div>{isActive && <BusinessFilter laptops={laptops} />}</div>
+            <div>{isActive && <BusinessFilter laptops={filteredLaptops} />}</div>
 
             {isActive && (
               <div className="w-full flex lg:justify-end justify-center items-center">

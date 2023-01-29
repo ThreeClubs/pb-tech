@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-function BusinessFilter() {
+function BusinessFilter({ laptops }) {
   const [field, setField] = useState("");
   const [feature, setFeature] = useState("");
   const [toggleLabel, setToggleLabel] = useState(false);
